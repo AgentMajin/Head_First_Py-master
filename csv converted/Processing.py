@@ -71,7 +71,7 @@ for categories in Category:
         check_array = SKU_DD + SKU_HMP + SKU_TPCN
     for files in Category[categories]:
         # Convert filename to include Store name only. Used for output name later.
-        output = output_path + '/' + files.replace(" - HMP", '').replace(" - TPCN", '').replace(" - DD", '')
+        output = output_path + '/' + 'Co.opMart' + files.replace(" - HMP", '').replace(" - TPCN", '').replace(" - DD", '')
         # Open input and output file
         try:
             with open(directory_path + files, 'r', encoding='ISO-8859-1') as input_files, open(output, 'a', newline='',

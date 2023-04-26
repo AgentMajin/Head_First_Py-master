@@ -14,12 +14,14 @@ from datetime import date
 import shutil
 
 today = date.today()
+
 # Create an array for saving all .csv file directory
-directory_path = "/Users/vuphitruong/Desktop/  /Head_First_Py-master/csv converted/"
+directory_path = "C:\\Users\\Admins\\PycharmProjects\\Head_First_Py-master\\csv converted\\"
 filenames = glob.glob(directory_path + '*.csv')
 for i in range(len(filenames)):
     filenames[i] = filenames[i].replace(str(directory_path),'')
-output_path = directory_path + 'output' + str(today)
+
+output_path = directory_path + 'output' + str(today) + '\\'
 if os.path.exists(output_path):
     shutil.rmtree(output_path)
 os.mkdir(output_path)
@@ -52,11 +54,8 @@ for filename in filenames:
     if filename.find("HMP") == -1 and filename.find("TPCN") == -1 and filename.find("DD") == -1:
         Category['All'].append(filename)
 
-Category['All'].remove('SKU_NH-added.csv')
-# for NH in Nganh_Hang:
-#     print(NH)
-#     for filenames in Nganh_Hang[NH]:
-#         print(filenames)
+master_data_file = ['SKU_NH-added.csv', 'StoreID.csv']
+Category['All'] = [files for files in Category['All'] if files not in master_data_file]
 
 
 # Open file and write an output to save result
@@ -71,10 +70,15 @@ for categories in Category:
         check_array = SKU_DD + SKU_HMP + SKU_TPCN
     for files in Category[categories]:
         # Convert filename to include Store name only. Used for output name later.
-        output = output_path + '/' + 'Co.opMart' + files.replace(" - HMP", '').replace(" - TPCN", '').replace(" - DD", '')
+        output_filename = 'Co.opMart ' + files.replace(" - HMP", '').replace(" - TPCN", '').replace(" - DD", '').replace('.csv','')
+        with open(directory_path + "StoreID.csv", 'r') as StoreID_file:
+            reader = csv.DictReader(StoreID_file)
+            for row in reader:
+                if row['STRNAM'] == output_filename:
+                    output_filename = output_filename + ' ' + row['STRNUM'] + '.csv'
         # Open input and output file
         try:
-            with open(directory_path + files, 'r', encoding='ISO-8859-1') as input_files, open(output, 'a', newline='',
+            with open(directory_path + files, 'r', encoding='ISO-8859-1') as input_files, open(output_path + output_filename, 'a', newline='',
                                                                               encoding='ISO-8859-1') as output_files:
                 reader = csv.DictReader(input_files)
                 writer = csv.DictWriter(output_files, fieldnames=reader.fieldnames)

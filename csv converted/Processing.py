@@ -16,12 +16,12 @@ import shutil
 today = date.today()
 
 # Create an array for saving all .csv file directory
-directory_path = "C:\\Users\\Admins\\PycharmProjects\\Head_First_Py-master\\csv converted\\"
+directory_path = "/Users/vuphitruong/Desktop/  /Head_First_Py-master/csv converted/"
 filenames = glob.glob(directory_path + '*.csv')
 for i in range(len(filenames)):
     filenames[i] = filenames[i].replace(str(directory_path),'')
 
-output_path = directory_path + 'output' + str(today) + '\\'
+output_path = directory_path + 'output' + str(today) + '/'
 if os.path.exists(output_path):
     shutil.rmtree(output_path)
 os.mkdir(output_path)
@@ -82,6 +82,7 @@ for categories in Category:
                                                                               encoding='ISO-8859-1') as output_files:
                 reader = csv.DictReader(input_files)
                 writer = csv.DictWriter(output_files, fieldnames=reader.fieldnames)
+                writer.writeheader()
                 for row in reader:
                     if row['ITEM'] in check_array:
                         writer.writerow(row)

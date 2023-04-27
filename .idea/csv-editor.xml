@@ -3,7 +3,49 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="/csv converted/ output 042723/Co.opMart Huynh Tan Phat/Co.opMart Huynh Tan Phat 159.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/csv converted/Cu Chi - HMP.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/csv converted/Cu Chi - TPCN.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/csv converted/Hau Giang - DD.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/csv converted/Hau Giang - HMP.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/csv converted/SKU_NH-added.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/csv converted/StoreID.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -18,6 +60,27 @@
           </value>
         </entry>
         <entry key="/csv converted/output2023-04-26/Binh Tan 2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/csv converted/output2023-04-26/Co.opMart Can Gio 180.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/csv converted/output2023-04-26/Co.opMart Cu Chi 175.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/csv converted/output2023-04-27/Co.opMart Binh Tan 2 541.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
